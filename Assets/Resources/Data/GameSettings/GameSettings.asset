@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d733fde07b9b98b4c8031c835149d34c, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  coreGameData:
+    TimerData:
+      Time: 60
+    OrderData:
+      OrderDictionary:
+        m_Keys:
+        - {fileID: 21300000, guid: 77b28124b8bda494381c80bd5aa42c22, type: 3}
+        - {fileID: 21300000, guid: bee24f07c57157e45a946eed3bfe8b84, type: 3}
+        - {fileID: 21300000, guid: 549cb4f2b86d1b84d8cd41c1cfde26c8, type: 3}
+        - {fileID: 21300000, guid: f1f50c7ef90b19741b26f2040806cf56, type: 3}
+        - {fileID: 21300000, guid: c9f08c3c1ae2a364aaeaa3712540b1d4, type: 3}
+        m_Values: 01000000080000000a0000000300000006000000
+  playerData:
+    PlayerMovementData:
+      MovementSpeed: 5
+    PlayerRotationData:
+      RotationSpeed: 5
+    PlayerInteractData:
+      InteractDistance: 2
+  countersData:
+    StoveCounterData:
+      CookingTime: 5
+      Danger_Image_Animation_Loop_Count: 6
+  inputData:
+    InteractKey: 101
+  kitchenObjectsData:
+    KitchenObjectsData:
+      SliceableKitchenObjectsList: 050000000700000009000000
+      CookableKitchenObjectsList: 02000000
+      PlateableKitchenObjectsList: 010000000300000006000000080000000a000000
+      SlicedKitchenObjectsDictionary:
+        m_Keys: 050000000700000009000000
+        m_Values: 06000000080000000a000000
+  kitchenObjectSpawnerData:
+    Bread: {fileID: 3812876574508226177, guid: 2eff94fa429ffb94b9025514c47a51d8, type: 3}
+    UncookedMeat: {fileID: 3812876574508226177, guid: 824fea11e349c0c4aa19abff04a98798,
+      type: 3}
+    CookedMeat: {fileID: 3812876574508226177, guid: 96e5be8c0b0366f49bd038bd5fbf31c9,
+      type: 3}
+    BurnedMeat: {fileID: 3812876574508226177, guid: 97a911663e0327c43b583a2a2e7155c8,
+      type: 3}
+    Tomato: {fileID: 3812876574508226177, guid: 80b32d17ad2f2124681c6a92509848ee,
+      type: 3}
+    SlicedTomato: {fileID: 3812876574508226177, guid: d490116fb2b80454baa0896b50cc1c57,
+      type: 3}
+    Cabbage: {fileID: 3812876574508226177, guid: aa5803ee2f661c147b4ad751e226e5d9,
+      type: 3}
+    SlicedCabbage: {fileID: 3812876574508226177, guid: 4ebdccaa02aa03f42a147b648f94cea4,
+      type: 3}
+    Cheese: {fileID: 3812876574508226177, guid: 66c7e01c1dd8656438cc386b44b043b8,
+      type: 3}
+    SlicedCheese: {fileID: 3812876574508226177, guid: e07224299c5ed8a4b87242cb77a40c0c,
+      type: 3}
+    Plate: {fileID: 3812876574508226177, guid: 99ea61da3bb11f14996dedf7dfa27038, type: 3}
