@@ -1,6 +1,5 @@
 using _Scripts.Enums;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _Scripts.Units.Counter
 {

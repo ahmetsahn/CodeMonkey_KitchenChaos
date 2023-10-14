@@ -1,6 +1,4 @@
-using _Scripts.Signals;
 using UnityEngine;
-using Zenject;
 
 namespace _Scripts.Units.Counter
 {

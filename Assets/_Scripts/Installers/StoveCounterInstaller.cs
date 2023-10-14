@@ -1,11 +1,13 @@
 using _Scripts.Units.Counter.StoveCounter;
-using UnityEngine;
 using Zenject;
 
-public class StoveCounterInstaller : MonoInstaller
+namespace _Scripts.Installers
 {
-    public override void InstallBindings()
+    public class StoveCounterInstaller : MonoInstaller
     {
-        Container.BindInterfacesAndSelfTo<StoveCounterVisual>().AsSingle();
+        public override void InstallBindings()
+        {
+            Container.BindInterfacesAndSelfTo<StoveCounterVisual>().AsSingle();
+        }
     }
 }

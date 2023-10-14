@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
 using _Scripts.Enums;
 using _Scripts.Keys;
 using _Scripts.Signals;
-using UnityEngine;
 using Zenject;
 
 namespace _Scripts.Units.Counter.ContainerCounter

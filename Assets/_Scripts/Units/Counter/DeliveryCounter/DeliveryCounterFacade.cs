@@ -1,7 +1,3 @@
-using System;
-using System.Linq;
-using _Scripts.Data.CoreGameData;
-using _Scripts.Data.KitchenObjectsData;
 using _Scripts.Enums;
 using _Scripts.Keys;
 using _Scripts.Signals;
@@ -82,8 +78,6 @@ namespace _Scripts.Units.Counter.DeliveryCounter
             });
                 
             Deselect();
-            
-            
         }
 
         public override bool Select()

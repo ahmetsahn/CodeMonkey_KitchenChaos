@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
 using _Scripts.Enums;
-using _Scripts.Signals;
-using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Serialization;
 
 namespace _Scripts.Data.KitchenObjectsData
 {

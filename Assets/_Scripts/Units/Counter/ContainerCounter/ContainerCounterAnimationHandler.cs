@@ -1,6 +1,3 @@
-using System;
-using System.Threading.Tasks;
-using _Scripts.Signals;
 using UnityEngine;
 
 namespace _Scripts.Units.Counter.ContainerCounter

@@ -30,7 +30,6 @@ namespace _Scripts.Installers
         private void SignalBindings()
         {
             Container.Bind<InputSignals>().AsSingle();
-            Container.Bind<CounterSignals>().AsSingle();
             Container.Bind<PlayerSignals>().AsSingle();
             Container.Bind<KitchenObjectSpawnSignal>().AsSingle();
             Container.Bind<UISignals>().AsSingle();

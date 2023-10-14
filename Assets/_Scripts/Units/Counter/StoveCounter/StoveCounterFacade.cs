@@ -1,10 +1,7 @@
-using System;
-using System.Linq;
 using _Scripts.Data.KitchenObjectsData;
 using _Scripts.Enums;
 using _Scripts.Keys;
 using _Scripts.Signals;
-using UnityEngine;
 using Zenject;
 
 namespace _Scripts.Units.Counter.StoveCounter
@@ -22,6 +19,7 @@ namespace _Scripts.Units.Counter.StoveCounter
         private PlayerSignals _playerSignals;
         
         private KitchenObjectSpawnSignal _kitchenObjectSpawnSignal;
+        
         
         [Inject]
         public void Construct(

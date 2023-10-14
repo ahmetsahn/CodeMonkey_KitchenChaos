@@ -10,11 +10,11 @@ namespace _Scripts.Spawner
 {
     public class KitchenObjectSpawner : IDisposable
     {
-        private DiContainer _diContainer;
+        private readonly DiContainer _diContainer;
         
         private readonly KitchenObjectSpawnerData _kitchenObjectSpawnerData;
         
-        private readonly Dictionary<KitchenObjects,ObjectPool<PoolObject>> _kitchenObjectsDictionary;
+        private Dictionary<KitchenObjects,ObjectPool<PoolObject>> _kitchenObjectsDictionary;
         
         private readonly KitchenObjectSpawnSignal _kitchenObjectSpawnSignal;
         
@@ -36,25 +36,8 @@ namespace _Scripts.Spawner
             DiContainer diContainer)
         {
             _diContainer = diContainer;
-            
-            Debug.Log(_diContainer);
-            
             _kitchenObjectSpawnerData = kitchenObjectSpawnerData;
             _kitchenObjectSpawnSignal = kitchenObjectSpawnSignal;
-
-            _kitchenObjectsDictionary = new Dictionary<KitchenObjects, ObjectPool<PoolObject>>();
-            
-            _breadPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Bread);
-            _uncookedMeatPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.UncookedMeat);
-            _cookedMeatPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.CookedMeat);
-            _burnedMeatPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.BurnedMeat);
-            _tomatoPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Tomato);
-            _slicedTomatoPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.SlicedTomato);
-            _cabbagePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Cabbage);
-            _slicedCabbagePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.SlicedCabbage);
-            _cheesePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Cheese);
-            _slicedCheesePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.SlicedCheese);
-            _platePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Plate);
             
             Initialize();
             
@@ -70,17 +53,32 @@ namespace _Scripts.Spawner
         
         public void Initialize()
         {
-            _kitchenObjectsDictionary.Add(KitchenObjects.Bread, _breadPool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.UncookedMeat, _uncookedMeatPool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.CookedMeat, _cookedMeatPool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.BurnedMeat, _burnedMeatPool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.Tomato, _tomatoPool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.SlicedTomato, _slicedTomatoPool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.Cabbage, _cabbagePool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.SlicedCabbage, _slicedCabbagePool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.Cheese, _cheesePool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.SlicedCheese, _slicedCheesePool);
-            _kitchenObjectsDictionary.Add(KitchenObjects.Plate, _platePool);
+            _breadPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Bread);
+            _uncookedMeatPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.UncookedMeat);
+            _cookedMeatPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.CookedMeat);
+            _burnedMeatPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.BurnedMeat);
+            _tomatoPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Tomato);
+            _slicedTomatoPool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.SlicedTomato);
+            _cabbagePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Cabbage);
+            _slicedCabbagePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.SlicedCabbage);
+            _cheesePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Cheese);
+            _slicedCheesePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.SlicedCheese);
+            _platePool = new ObjectPool<PoolObject>(_diContainer,_kitchenObjectSpawnerData.Plate);
+            
+            _kitchenObjectsDictionary = new Dictionary<KitchenObjects, ObjectPool<PoolObject>>
+            {
+                { KitchenObjects.Bread, _breadPool },
+                { KitchenObjects.UncookedMeat, _uncookedMeatPool },
+                { KitchenObjects.CookedMeat, _cookedMeatPool },
+                { KitchenObjects.BurnedMeat, _burnedMeatPool },
+                { KitchenObjects.Tomato, _tomatoPool },
+                { KitchenObjects.SlicedTomato, _slicedTomatoPool },
+                { KitchenObjects.Cabbage, _cabbagePool },
+                { KitchenObjects.SlicedCabbage, _slicedCabbagePool },
+                { KitchenObjects.Cheese, _cheesePool },
+                { KitchenObjects.SlicedCheese, _slicedCheesePool },
+                { KitchenObjects.Plate, _platePool }
+            };
         }
 
         public void Spawn(KitchenObjects kitchenObjects,Transform position)

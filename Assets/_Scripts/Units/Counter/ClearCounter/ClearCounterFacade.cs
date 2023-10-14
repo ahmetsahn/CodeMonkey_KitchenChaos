@@ -61,8 +61,6 @@ namespace _Scripts.Units.Counter.ClearCounter
         {
             if (IsCanTake())
             {
-                //TODO: Add logic for taking the object from the counter
-                
                 _playerSignals.OnKitchenObjectOwnedByThePlayerChanged?.Invoke
                 (new KitchenObjectOwnedByThePlayerParams()
                 {
@@ -80,8 +78,6 @@ namespace _Scripts.Units.Counter.ClearCounter
 
             if (IsCanPut())
             {
-                //TODO: Add logic for putting the object on the counter
-                
                 if(_isPutFoodOnThePlate)
                 {
                     _listSignals.OnAddToPlaneList.Invoke(_clearCounterView.KitchenObjectOwnedByThePlayer);

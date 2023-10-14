@@ -1,7 +1,5 @@
-using System;
 using _Scripts.Signals;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace _Scripts.Units.Player

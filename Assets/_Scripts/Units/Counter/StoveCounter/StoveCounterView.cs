@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using _Scripts.Enums;
 using UnityEngine;
 
@@ -8,13 +7,19 @@ namespace _Scripts.Units.Counter.StoveCounter
     {
         [SerializeField]
         private GameObject stoveCounterVisual;
-        
-        public GameObject StoveCounterVisual => stoveCounterVisual;
+
+        public GameObject StoveCounterVisual
+        {
+            get => stoveCounterVisual;
+        }
         
         [SerializeField]
         private ParticleSystem fireParticleSystem;
-        
-        public ParticleSystem FireParticleSystem => fireParticleSystem;
+
+        public ParticleSystem FireParticleSystem
+        {
+            get => fireParticleSystem;
+        }
         
         private KitchenObjects _kitchenObjectOnTheCounter;
         
@@ -26,6 +31,10 @@ namespace _Scripts.Units.Counter.StoveCounter
         
         [SerializeField]
         private Transform kitchenObjectSpawnPositionOnCounter;
-        public Transform KitchenObjectSpawnPositionOnCounter => kitchenObjectSpawnPositionOnCounter;
+
+        public Transform KitchenObjectSpawnPositionOnCounter
+        {
+            get => kitchenObjectSpawnPositionOnCounter;
+        }
     }
 }

@@ -1,8 +1,6 @@
-using System;
 using _Scripts.Signals;
 using _Scripts.Enums;
 using _Scripts.Keys;
-using UnityEngine;
 using Zenject;
 
 namespace _Scripts.Units.Counter.TrashCounter
@@ -10,7 +8,9 @@ namespace _Scripts.Units.Counter.TrashCounter
     public class TrashCounterFacade : BaseCounterFacade
     {
         private TrashCounterView _trashCounterView;
+        
         private PlayerSignals _playerSignals;
+        
         private KitchenObjectSpawnSignal _kitchenObjectSpawnSignal;
         
         [Inject]

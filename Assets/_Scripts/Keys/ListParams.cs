@@ -12,7 +12,10 @@ namespace _Scripts.Keys
         private List<KitchenObjects> _orderList = new();
 
         private readonly CoreGameSignals _coreGameSignals;
+        
         private readonly ListSignals _listSignals = new();
+        
+        
         public ListParams(
             CoreGameSignals coreGameSignals,
             ListSignals listSignals)

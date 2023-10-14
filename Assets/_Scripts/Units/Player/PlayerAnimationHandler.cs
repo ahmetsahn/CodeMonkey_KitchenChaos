@@ -15,8 +15,6 @@ namespace _Scripts.Units.Player
         private static readonly int Idle = Animator.StringToHash("PlayerIdle");
         private static readonly int Walk = Animator.StringToHash("PlayerWalk");
         
-        private Vector3 _moveDirection;
-        
         
         public PlayerAnimationHandler(PlayerView playerView, InputSignals inputSignals)
         {
@@ -34,8 +32,6 @@ namespace _Scripts.Units.Player
         
         private void OnInputTaken(InputParams inputParams)
         {
-            _moveDirection = inputParams.MoveDirection;
-            
             var state = Walk;
             if(state == _currentState) return;
             _playerView.PlayerAnimator.CrossFade(state,0,0);

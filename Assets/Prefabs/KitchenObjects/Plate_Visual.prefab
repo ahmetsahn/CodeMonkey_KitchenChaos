@@ -536,11 +536,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b36498176b542c19311c2a8b10fe8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BreadIcon: {fileID: 5721192050048300227}
-  CookedMeatIcon: {fileID: 5538528785688814889}
-  SlicedTomato: {fileID: 819979879856109048}
-  SlicedCabbage: {fileID: 5463788372315873842}
-  SlicedCheeseIcon: {fileID: 6524208329322948854}
+  breadIcon: {fileID: 5721192050048300227}
+  cookedMeatIcon: {fileID: 5538528785688814889}
+  slicedTomato: {fileID: 819979879856109048}
+  slicedCabbage: {fileID: 5463788372315873842}
+  slicedCheeseIcon: {fileID: 6524208329322948854}
 --- !u!1 &4181365402314177344
 GameObject:
   m_ObjectHideFlags: 0

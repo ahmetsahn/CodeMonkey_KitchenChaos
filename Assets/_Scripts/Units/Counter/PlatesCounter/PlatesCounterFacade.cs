@@ -1,8 +1,6 @@
-using System;
 using _Scripts.Enums;
 using _Scripts.Keys;
 using _Scripts.Signals;
-using UnityEngine;
 using Zenject;
 
 namespace _Scripts.Units.Counter.PlatesCounter
@@ -14,6 +12,7 @@ namespace _Scripts.Units.Counter.PlatesCounter
         private PlayerSignals _playerSignals;
         
         private KitchenObjectSpawnSignal _kitchenObjectSpawnSignal;
+        
         
         [Inject]
         public void Construct(

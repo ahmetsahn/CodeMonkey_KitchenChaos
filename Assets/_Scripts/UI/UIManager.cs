@@ -1,4 +1,3 @@
-using System;
 using _Scripts.Enums;
 using _Scripts.Signals;
 using UnityEngine;
@@ -9,6 +8,7 @@ namespace _Scripts.UI
     public class UIManager : MonoBehaviour
     {
         private UISignals _uiSignals;
+        
         private CoreGameSignals _coreGameSignals;
         
         [Inject]

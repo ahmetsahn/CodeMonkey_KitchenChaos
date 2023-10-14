@@ -11,6 +11,8 @@ namespace _Scripts
     {
         private readonly CoreGameSignals _coreGameSignals;
         
+        private readonly InputSignals _inputSignals;
+        
         private readonly InputData _inputData;
         
         private float _horizontal;
@@ -22,8 +24,6 @@ namespace _Scripts
         private Vector3 _moveDirection;
         
         private InputParams _inputParams;
-        
-        private readonly InputSignals _inputSignals;
         
         private bool _isEnableInput;
         

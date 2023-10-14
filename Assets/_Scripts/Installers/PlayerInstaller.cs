@@ -1,6 +1,4 @@
-using System;
 using _Scripts.Units.Player;
-using UnityEngine;
 using Zenject;
 
 namespace _Scripts.Installers

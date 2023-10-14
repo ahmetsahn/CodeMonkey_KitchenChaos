@@ -14,6 +14,10 @@ namespace _Scripts.Units.Counter.ClearCounter
         
         [SerializeField]
         private Transform kitchenObjectSpawnPositionOnCounter;
-        public Transform KitchenObjectSpawnPositionOnCounter => kitchenObjectSpawnPositionOnCounter;
+
+        public Transform KitchenObjectSpawnPositionOnCounter
+        {
+            get => kitchenObjectSpawnPositionOnCounter;
+        }
     }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace _Scripts.Units.Counter.CuttingCounter

@@ -34,6 +34,7 @@ namespace _Scripts.Core
             {
                 case GameStates.Menu:
                     _coreGameSignals.OnResetGame?.Invoke();
+                    _coreGameSignals.OnGameStarted?.Invoke();
                     break;
                 case GameStates.Play:
                     _coreGameSignals.OnPlayStarted?.Invoke();

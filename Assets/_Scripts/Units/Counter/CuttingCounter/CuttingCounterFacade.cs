@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using _Scripts.Data.KitchenObjectsData;
 using _Scripts.Enums;
 using _Scripts.Keys;
 using _Scripts.Signals;
-using UnityEngine;
 using Zenject;
 
 namespace _Scripts.Units.Counter.CuttingCounter
@@ -84,12 +82,12 @@ namespace _Scripts.Units.Counter.CuttingCounter
                     Invoke(_cuttingCounterView.KitchenObjectOwnedByThePlayer,_cuttingCounterView.KitchenObjectSpawnPositionOnCounter);
                 
                 _cuttingCounterAnimationHandler.PlayCutAnimation();
+                
                 _playerSignals.OnDisableInteractRaycast?.Invoke();
+                
                 Deselect();
                 
                 StartCoroutine(AnimationTimer());
-                
-                
             }
         }
 

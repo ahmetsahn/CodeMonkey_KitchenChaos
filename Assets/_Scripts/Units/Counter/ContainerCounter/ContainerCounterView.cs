@@ -8,10 +8,13 @@ namespace _Scripts.Units.Counter.ContainerCounter
         [SerializeField]
         private Animator containerCounterAnimator;
         
+        public Animator ContainerCounterAnimator
+        {
+            get => containerCounterAnimator;
+        }
+        
         [SerializeField]
         private KitchenObjects kitchenObjectOnTheCounter;
-        
-        public Animator ContainerCounterAnimator => containerCounterAnimator;
         
         public KitchenObjects KitchenObjectOnTheCounter
         {

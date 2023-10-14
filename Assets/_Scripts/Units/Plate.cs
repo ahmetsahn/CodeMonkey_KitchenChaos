@@ -1,21 +1,21 @@
-using System;
 using System.Collections.Generic;
 using _Scripts.Enums;
 using _Scripts.Signals;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace _Scripts.Units
 {
     public class Plate : MonoBehaviour
     {
-        private readonly Dictionary<KitchenObjects, GameObject> PlateIconsDictionary = new();
-        [SerializeField] private GameObject BreadIcon;
-        [SerializeField] private GameObject CookedMeatIcon;
-        [SerializeField] private GameObject SlicedTomato;
-        [SerializeField] private GameObject SlicedCabbage;
-        [SerializeField] private GameObject SlicedCheeseIcon;
+        private readonly Dictionary<KitchenObjects, GameObject> _plateIconsDictionary = new();
+        
+        [SerializeField] private GameObject breadIcon;
+        [SerializeField] private GameObject cookedMeatIcon;
+        [SerializeField] private GameObject slicedTomato;
+        [SerializeField] private GameObject slicedCabbage;
+        [SerializeField] private GameObject slicedCheeseIcon;
 
         private PlateSignals _plateSignals;
         
@@ -27,11 +27,11 @@ namespace _Scripts.Units
         
         private void Initialize()
         {
-            PlateIconsDictionary.Add(KitchenObjects.Bread, BreadIcon);
-            PlateIconsDictionary.Add(KitchenObjects.CookedMeat, CookedMeatIcon);
-            PlateIconsDictionary.Add(KitchenObjects.SlicedTomato, SlicedTomato);
-            PlateIconsDictionary.Add(KitchenObjects.SlicedCabbage, SlicedCabbage);
-            PlateIconsDictionary.Add(KitchenObjects.SlicedCheese, SlicedCheeseIcon);
+            _plateIconsDictionary.Add(KitchenObjects.Bread, breadIcon);
+            _plateIconsDictionary.Add(KitchenObjects.CookedMeat, cookedMeatIcon);
+            _plateIconsDictionary.Add(KitchenObjects.SlicedTomato, slicedTomato);
+            _plateIconsDictionary.Add(KitchenObjects.SlicedCabbage, slicedCabbage);
+            _plateIconsDictionary.Add(KitchenObjects.SlicedCheese, slicedCheeseIcon);
         }
 
         [Inject]
@@ -52,12 +52,12 @@ namespace _Scripts.Units
         
         private void OnSetActivePlateIcon(KitchenObjects kitchenObject)
         {
-            PlateIconsDictionary[kitchenObject].SetActive(true);
+            _plateIconsDictionary[kitchenObject].SetActive(true);
         }
         
         private void SetDefaultPlateIcons()
         {
-            foreach (var plateIcon in PlateIconsDictionary)
+            foreach (var plateIcon in _plateIconsDictionary)
             {
                 plateIcon.Value.SetActive(false);
             }
